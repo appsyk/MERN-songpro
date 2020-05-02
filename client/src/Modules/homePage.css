@@ -1,0 +1,350 @@
+body{
+  font-family: 'Ubuntu', bold;
+}
+
+.mic-area{
+/* height: 100vh; */
+width: 100%;
+}
+
+.mic-style{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  input[type=search]{
+    border-radius: 15px;
+  }
+  input[type=search]:focus{
+    /* background-color: rgb(199, 235, 240); */
+    box-shadow: 0px 0px 9px rgb(247, 237, 148);
+  }
+
+  .icon-liked-page{
+    float: left;
+    display: flex;
+  }
+
+
+  .liked-page{
+    background-color: rgba(236, 236, 236, 0.945) !important;
+    min-height: 100vh;
+    min-width: 100vw;
+    font-family: 'Ubuntu', bold;
+
+  }
+  .liked-page p{
+    margin: 0;
+  }
+  .like-cards{
+    background: white;
+    width: 215px;
+    height: 300px;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px gray;
+    padding: 1px 5px 2.5px 5px;
+  }
+
+  /* .like-cards:hover{
+    transform: scale(1.2);
+    animation: watch-btn-anime 0.3s ease-out;
+  } */
+ 
+  .card-icon{
+    text-align: center;
+    /* top: 80%; */
+    position: -webkit-sticky;
+    position: sticky;
+    /* right: -44px; */
+    color: rgb(216, 22, 22);
+    /* transform: translateY(-100%); */
+    /* width: 50px; */
+    /* margin-top: 50px; */
+    /* height: 1000px; */
+    background: rgba(0, 0, 0, 0.575);
+    bottom: 130px !important;
+  }
+  /* .card-icon:hover{
+    display: block;
+    transform: scale(1.2);
+    animation: like-btn-anime 0.3s ease-out;
+  } */
+  @keyframes like-btn-anime{
+    0%{
+      transform: scale(1);
+      /* transform: translateY(0); */
+    }
+    100%{
+      transform: scale(1.2);
+      /* transform: translateY(-50%); */
+    }
+  }
+
+  .like-btn-list{
+    cursor: pointer;
+    position: absolute;
+    color: #e22e2e;
+    text-shadow: 2px 2px 7px black;
+    z-index: 100;
+}
+
+  .liked-time{
+    text-align: center;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  .liked-title{
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px !important;
+  }
+  .liked-des{
+    font-size: 11.5px;
+    /* text-align: justify; */
+    margin-top: 5px !important;
+  }
+  .watch-btn{
+    margin-top: 50%;
+    margin-bottom: 66%;
+  }
+  .watch-btn-test{
+    margin-top: 118%;
+  }
+  .rem-btn{
+    color: black;
+    font-size: 1.7em;
+    /* text-shadow: 1px 1px 4px black; */
+    position: absolute;
+    border-radius: 6px;
+    width: 23px;
+    text-align: center;
+    background: white;
+    z-index: 10;
+    box-shadow: 0px 1px 7px black;
+  }
+  .card-icon-test{
+    text-align: right;
+    /* top: 80%; */
+    position: -webkit-sticky;
+    position: sticky;
+    /* right: -44px; */
+    color: rgb(216, 22, 22);
+    /* transform: translateY(-100%); */
+    /* width: 50px; */
+    /* margin-top: 50px; */
+    /* height: 1000px; */
+    /* background-image: linear-gradient(217deg, rgba(252, 252, 252, 0.11), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(247, 247, 247, 0.089), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0, 0, 0, 0.8), rgba(0,0,255,0) 70.71%); */
+    /* background-image: linear-gradient(to left top, rgba(250, 248, 248, 0) , rgba(0, 0, 0, 0)); */
+    bottom: 2px !important;
+  }
+  .card-icon-test:hover{
+    background-image: linear-gradient(217deg, rgba(252, 252, 252, 0.11), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(247, 247, 247, 0.089), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgb(0, 0, 0), rgba(10, 10, 10, 0.384) 70.71%);
+    animation: watch-btn-anime 0.5s ease-out;
+    animation-fill-mode: forwards;
+  }
+  /* .watch-btn-test:hover{
+    margin-top: 115%;
+    transform: scale(2);
+    bottom: -15px;
+    right: 30px;
+    position: absolute;
+    animation: watch-btn-anime 1s ease-out;
+  } */
+
+  @keyframes watch-btn-anime{
+    0%{
+      /* transform: scale(1); */
+      opacity: 0;
+    }
+    100%{
+      /* transform: scale(1.2); */
+      opacity: 1;
+    }
+  }
+
+  .logo-style{
+    color: rgb(2, 203, 252) !important;
+    display: flex;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+  }
+
+  .logo-style:hover{
+    /* background: linear-gradient(to right, rgb(233, 9, 65), rgb(0, 110, 255) 70.71%); */
+    background:
+    linear-gradient(127deg, rgba(235, 8, 76, 0.986), rgba(255, 0, 85, 0) 70.71%),
+    linear-gradient(336deg, rgb(11, 167, 206), rgba(10, 10, 10, 0.384) 70.71%),
+    linear-gradient(217deg, rgb(223, 184, 12), rgba(0, 255, 179, 0) 70.71%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none !important;
+  }
+
+
+@media screen and (max-width:460px){
+
+  .like-cards-ytlist{
+    width:90% !important;
+  }
+  .like-cards-ytlist:hover{
+    width: 85% !important;
+    animation: vid-list-anime 0.5s ease-out;
+
+    z-index: 12;
+    transform: scale(1.1) !important;
+    box-shadow: 0px 0px 7px 2px black;
+  }
+}
+.username-style{
+  color: rgb(243, 241, 241);
+  font-family: 'Ubuntu', bold;
+  margin-left: 25px;
+  background: rgba(0, 0, 0, 0.678);
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.remove-anime{
+  animation: rem-ani 1.5s ease-out;
+}
+
+@keyframes rem-ani {
+  0%{
+    opacity: 1;
+  }
+  10%{
+    transform: scale(1.2);
+  }
+  30%{
+    transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+#youtube-result-row.row{
+  background-color: rgba(0, 0, 0, 0.515);
+}
+
+.like-cards-ytlist{
+  background: white;
+  width: 215px;
+  height: 300px;
+  overflow: hidden;
+  margin: 5px;
+  word-break: break-word;
+  border-radius: 5px;
+  /* box-shadow: 0 4px 4px grey; */
+  padding: 5px 5px 5px 5px;
+}
+.like-cards-ytlist:hover{
+  animation: vid-list-anime 0.5s ease-out;
+  /* min-height: 60vw; */
+  /* width: 96%; */
+  transform: translateX(15vw);
+  z-index: 12;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 7px 2px black;
+}
+
+/* section Team-info--------------------- */
+
+#team-section.row{
+  padding: 3%;
+  background-color: rgba(0, 0, 0, 0.315);
+}
+.team-cards{
+ width: 200px;
+ /* height: 00px; */
+ /* background-color: #fff; */
+ color: #000;
+ border-radius: 5px; 
+ margin: 20px;
+ padding: 5px;
+}
+.team-title{
+  height: 50px;
+  width:100%;
+  background-image: linear-gradient(180deg, rgb(131, 128, 128), rgba(92, 90, 90, 0.486) 70.71%);
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 24px;
+  color: white;
+}
+.team-title p {
+  margin: 0;
+}
+.mem-avatar{
+  width:200px;
+  border-radius: 50%;
+}
+.team-cards:hover{
+  filter: grayscale(100%);
+  transform: scale(1.02);
+  animation: img-grey 0.5s ease-out;
+}
+@keyframes img-grey{
+  0%{
+    filter: grayscale(0%);
+    transform: scale(1);
+  }
+  100%{
+    filter: grayscale(100%);
+    transform: scale(1.02);
+  }
+}
+.team-content{
+  background: rgba(0, 0, 0, 0.836);
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+.btn-mar{
+  margin-left: 10px;
+}

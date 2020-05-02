@@ -1,0 +1,458 @@
+body{
+  /* background: url(../images/bg-image.jpg); */
+  background: url(../images/music-bg-img.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-size: 100vh 100vw; */
+}
+
+/* 
+  .blinking{
+    animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+} */
+
+
+.bg-image{
+  background-image: url(https://i.pinimg.com/originals/f4/aa/ef/f4aaef8….jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+@media only screen and (max-width:447px) {
+  /* .up-down-icon{
+    top: 200px;
+    float: right;
+    right: 5vh;
+    z-index: 13;
+    position: fixed;
+  } */
+  .maincomp{
+    margin-top: 28%;
+  }
+}
+
+.up-down-icon{
+  top: 111px;
+  float: right;
+  /* right: 5vh; */
+  z-index: 13;
+  position: fixed;
+  cursor: pointer;
+}
+.icon-up{
+color:rgb(82, 197, 82);
+margin-right: 20px;
+z-index: 1;
+}
+.icon-down{
+  color:rgb(231, 76, 76);
+  z-index: 1;
+  }
+
+  .icon-up:hover{
+  color:rgb(56, 128, 56);
+  /* margin-right: 20px;
+  transform: scale(1.2);
+  z-index: 1; */
+  /* animation: vid-list-anime .5s ease-out; */
+}
+.icon-down:hover{
+  color:rgb(194, 62, 62);
+  /* transform: rotateY(180deg);
+  z-index: 1; */
+  /* transform: scale(1.2); */
+  /* animation: up-down-icon .5s ease-out; */
+}
+
+.invert{
+  transform: rotateY(180deg);
+}
+@keyframes up-down-icon-anime{
+
+  0%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.3);
+  }
+  100%{
+    transform: scale(1.2);
+    /* height: 60vw;
+  width: 96%; */
+  }
+
+}
+
+@keyframes vid-list-anime{
+
+  0%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.3);
+  }
+  100%{
+    transform: scale(1.2);
+    /* height: 60vw;
+  width: 96%; */
+  }
+
+}
+
+@media only screen and (min-width:767px) {
+  .video-card{
+    /* margin: 10px; */
+    height: 219px !important;
+    width: 267px !important;
+    background: rgb(172, 228, 245);
+    padding: 7px;
+    margin-bottom: 10px;
+  margin-right: 10px;
+    border-radius: 5px;
+  }
+}
+.video-card{
+  margin-bottom: 10px;
+  margin-right: 10px;
+  height: 60vw;
+  width: 96%;
+  background: rgb(172, 228, 245);
+  padding: 7px;
+  border-radius: 5px;
+  
+}
+.video-card:hover{
+  animation: vid-list-anime 0.5s ease-out;
+  /* min-height: 60vw; */
+  width: 96%;
+  z-index: 12;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 7px 2px black;
+}
+
+
+@media only screen and (min-width:767px) {
+  .vidListAlign{
+    /* margin-left: 72%; */
+    /* margin-top: -31%; */
+    position: absolute;
+    overflow-y: scroll;
+    height: 380px;
+    top: 23%;
+    right: 4%;
+    /* scrollbar-face-color: red yellow; */
+  }
+  .maincomp{
+    margin-top:50px;
+    /* margin-left: -4%; */
+  }
+
+  .logo-adjust{
+    margin-left:5vh;
+  }
+  .logo-nm-ad{
+    padding:7px;
+  }
+
+  .vlist{
+    /* margin-left: -20px; */
+  }
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .vidListSize{
+    height:100px;
+  }
+  .modalSize{
+    height: 250px;
+    width: 400px;
+  }
+  .modalVideo{
+    height: 90%;
+    width: 100%;
+  }
+
+ 
+
+  .vidRend{
+    margin-left: 10%;
+  }
+  /* .list-content{} */
+  
+
+
+}
+
+.modal-header {
+  padding: 5px 10px !important;
+}
+
+modal-header .close {
+  padding: 1rem 1rem 0 0 !important;
+  margin: -1rem -3rem -1rem auto !important;
+  z-index: 10;
+  margin-right: -33px;
+}
+/* modal-header .close:hover{
+  transform: scale(1.2);
+  animation: like-btn-anime 0.3s ease-out;
+} */
+.nav-like-btn{
+  color: red;
+  margin: 12px; 
+}
+.nav-like-btn:hover{
+  transform: scale(1.2);
+  color: rgb(255, 82, 82);
+  animation: like-btn-anime 0.4s ease-out;
+}
+/* .like-btn{
+  padding: 3rem 1rem 0 0 !important;
+  color: rgba(220, 20, 60, 0.774);
+  cursor: pointer;
+} */
+
+.like-btn-card {
+  /* padding: 0rem 0rem 0 0 !important; */
+  color: #e44655;
+  cursor: pointer;
+  position: absolute;
+  right: 21px;
+  font-weight: bold;
+  bottom: 6px;
+  /* z-index: 10000; */
+}
+
+.like-btn{
+  padding: 0rem 0rem 0 0 !important;
+  color:#e44655;
+  cursor: pointer;
+  position: absolute;
+  right: 32px;
+  font-weight: bold;
+  bottom: 340px;
+}
+.al-like{
+  padding: 0rem 0rem 0 0 !important;
+  color:#e44655;
+  cursor: pointer;
+  position: absolute;
+  right: 32px;
+  font-weight: bold;
+  bottom: 340px;
+}
+.like-btn:hover{
+  color: rgb(204, 37, 51);
+  transform: scale(1.2);
+  animation: like-btn-anime 0.3s ease-out;
+}
+@keyframes like-btn-anime{
+  0%{
+    transform: scale(1);
+  }
+  80%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1.2);
+  }
+}
+
+.list-content{
+  /* width: 155px ; */
+  max-height: 155px;
+  /* padding-top: 10px; */
+position: relative;
+vertical-align: middle;
+/* overflow: auto; */
+}
+/* .list-content:before {
+  content:'';
+  width:100%;
+  height:100%;    
+  position:absolute;
+  left:0;
+  top:0;
+  background:linear-gradient(transparent 150px, white); */
+/* } */
+.listTitle{
+  color: rgb(3, 27, 43);
+  font-size: 90%;
+  font-family: 'Ubuntu', bold;
+  position: absolute; 
+  padding-top: 3px;
+}
+
+@media only screen and (max-width:992px) {
+.imaging{
+  /* align-items: center; */
+  margin-left: 10%;
+}
+.offspin{
+  display: none;
+}
+.imgD {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog-img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+
+}
+}
+
+@media only screen and (min-width:993px) {
+    /* For tablets: */
+    .searchBar {
+      width: 40%;
+      padding: 0;
+      margin-left: 30%;
+    }
+    .spin {
+      width: 1000px;
+      float: right;
+    }
+  }
+  @media only screen and (max-width:500px) {
+    /* For mobile phones: */
+    .menu, .searchBar, .right {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width:439px) {
+      .filmIn{
+          margin-left: -32px;
+          padding: 10px;
+          
+      }
+      .serchIcon{
+        margin-top: -11%;
+      }
+      
+  }
+
+  @media only screen and (max-width:757px) {
+
+    .sliderImg{
+      max-height: 1080px;
+      max-width: auto;
+
+    }
+  }
+
+  @media only screen and (min-width:553px) {
+    .buttSrch{
+        align-content: 'center';
+    }
+  }
+
+
+  .navBackColor{
+      /* background-image: linear-gradient(to top, #073c4688 , rgba(0, 255, 234, 0.062)); */
+      background-color: #2427275b;
+  }
+
+  .movie-main-info .movie-desc {
+    color: #7a8288;
+    padding: 10px 0;
+}
+
+.movie-main-info .movie-actors {
+  padding: 5px 0;
+}
+
+@media only screen and (min-width:767px) {
+
+.imgAlign{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: 25%;
+}
+}
+
+.listColor{
+  /* background-color: '#545758'; */
+}
+
+.videoList{
+  
+}
+
+.logoName{
+  /* font-family: 'Crimson', bold; */
+  font-family: 'Lobster', bold;
+  font-size: 40px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.fa-film{
+  text-shadow: 4px 4px 4px rgb(0, 0, 0);
+}
+
+.myCard{
+  font-family: 'Lobster', bold;
+  text-align: center;
+  /* font-size: 40px; */
+  /* text-shadow: 4px 4px 4px #9EB5BD; */
+}
+.myHomefont{
+  font-family: 'Ubuntu', bold;
+  /* font-size: 120px; */
+  /* text-shadow: 4px 4px 4px rgb(5, 7, 8); */
+}
+
+.searchIcon{
+  margin-top: -6%;
+  margin-left: 90%;
+}
+
+
+/* video frame----------------*/
+@media only screen and (max-width:600px) {
+
+  .main-video-frame{
+    z-index: 50;
+    height: 100%;
+    min-height: 200px;
+    /* max-height: ; */
+    width: 100%;
+    min-width:250px;
+    max-width:600px;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+}
+@media only screen and (min-width:600px) {
+
+.main-video-frame{
+  z-index: 50;
+  height: 100%;
+  min-height: 340px;
+  width: 100%;
+  min-width:250px;
+  max-width:600px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+}
