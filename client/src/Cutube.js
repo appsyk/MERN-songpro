@@ -34,12 +34,12 @@ class CuTube extends React.Component {
 
         var response = await Youtube.get('/search', {
             params: {
-                q: `feeling ${term} songs hindi and english`
+                q: `${term} songs`
             }
+            
         }).catch(err => {
             if(err){
                 alert(`There is a technical problem in our system and it's ${err.response.data.error.errors[0].reason}.\nPlease try again after some time or Enjoy watching liked videos.`)
-                console.log(`There is a technical problem in our system and it's ${err.response.data.error.errors[0].reason}`)
             }
         })
 
@@ -67,7 +67,6 @@ class CuTube extends React.Component {
                 msg2.lang = 'en-US';
                 window.speechSynthesis.speak(msg2);
             }
-            console.log('checking response type for an error', response)
             this.setState({
                 vids: response.data.items,
                 response: response1.data.Response,

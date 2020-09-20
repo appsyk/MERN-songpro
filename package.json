@@ -1,7 +1,7 @@
 {
   "name": "song_pro",
   "version": "1.0.0",
-  "description": "Final year project 2k20.",
+  "description": "Freelancing Project- Final year project 2k20.",
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",

@@ -18,18 +18,16 @@ class Login extends React.Component {
 
     onRegisterHandle = () => {
         const { email, password } = this.state;
-        console.log(1212, email, password)
+        
         axios.post('/api/user', { email, password })
             .then(res => {
-                console.log(11, res.data)
-
                 if (res.data === 11000) {
                     alert('this user already exists.')
                 } else {
                     alert('User registered successfully...');
                     localStorage.setItem('userNm', email[0])
                         var user = localStorage.getItem('userNm');
-                        var msg = new SpeechSynthesisUtterance(`Hello.....${user}........Welcome in..... Song Pro ..............................Now click on the Mic .... and tell me what you want to watch today`);
+                        var msg = new SpeechSynthesisUtterance(`Hello${user}........Welcome in Song Pro...Now click on the Mic and tell me what you want to watch today`);
                           msg.volume = 1;
                           msg.rate = 1;
                           msg.pitch = 0.8;
@@ -44,7 +42,7 @@ class Login extends React.Component {
                 //     loggedIn: true
                 // })
             })
-            .catch(err => console.log(11, err))
+            .catch(err => alert('Error: ', err))
     }
 
     onLoginHandle = () => {
@@ -52,8 +50,6 @@ class Login extends React.Component {
 
         axios.get('/api/user')
             .then(res => {
-                console.log(232, res.data)
-                console.log(email, password)
                 res.data.map(user => {
                     if (email[0] === user.email && password[0] === user.password) {
                         this.setState({
@@ -61,7 +57,7 @@ class Login extends React.Component {
                         })
                         localStorage.setItem('userNm', email[0])
                         var user1 = localStorage.getItem('userNm');
-                        var msg = new SpeechSynthesisUtterance(`Hello.....${user1}........Welcome in..... Song Pro ..............................Now click on the Mic .... and tell me what you want to watch today`);
+                        var msg = new SpeechSynthesisUtterance(`Hello${user1}........Welcome in Song Pro...Now click on the Mic and tell me what you want to watch today`);
                           msg.volume = 1;
                           msg.rate = 1;
                           msg.pitch = 0.8;
@@ -73,8 +69,7 @@ class Login extends React.Component {
                     }
                 })
             })
-            .catch(err => console.log(234, err));
-        console.log(email, password)
+            .catch(err => alert('Error: ', err));
     }
 
     render() {
@@ -92,13 +87,13 @@ class Login extends React.Component {
                             <div className="modal-body">
                                 <form onSubmit={this.onSubmitHandle}>
                                     <div className="form-group row">
-                                        <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Username</label>
+                                        <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Username<span className='requiSymbol'><sup>*</sup></span></label>
                                         <div className="col-sm-10">
-                                            <input type="text" className="form-control" onChange={this.onInputChange} name='email' placeholder='Email' />
+                                            <input type="text" className="form-control" onChange={this.onInputChange} name='email' placeholder='Enter your name' />
                                         </div>
                                     </div>
                                     <div className="form-group row">
-                                        <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Password</label>
+                                        <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Password<span className='requiSymbol'><sup>*</sup></span></label>
                                         <div className="col-sm-10">
                                             <input type="password" className="form-control" onChange={this.onInputChange} name='password' placeholder="Password" />
                                         </div>

@@ -3,6 +3,8 @@ import React from 'react';
 import './Modules/homePage.css';
 import './Modules/LoadStyle.css';
 
+import Helper from './components/Helper';
+
 class HomePage extends React.Component {
     render() {
 
@@ -16,6 +18,7 @@ class HomePage extends React.Component {
                     <div className="mic-area">
 
                     </div>
+                    <Helper />
                 </section>
                 {/* <section className='' >
                     <div className='team-title'>

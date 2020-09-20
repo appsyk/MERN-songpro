@@ -1,3 +1,3 @@
 module.exports = {
-    mongoURI:"mongodb://songpro:songpro@cluster0-shard-00-00-w6kqu.mongodb.net:27017,cluster0-shard-00-01-w6kqu.mongodb.net:27017,cluster0-shard-00-02-w6kqu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
+    mongoURI:"mongodb+srv://prod-songpro:prod-songpro@cluster0.mapv1.mongodb.net/<dbname>?retryWrites=true&w=majority"
 }

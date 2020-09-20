@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const user = require('./routes/api/user');
-const like = require('./routes/api/like')
+const like = require('./routes/api/like');
 
 const app = express();
 

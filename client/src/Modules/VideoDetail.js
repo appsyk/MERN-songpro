@@ -23,18 +23,15 @@ const VideoDetail = ({ video }) => {
                 // else console.log(2, dt.data.id.videoId, '===', video.id.videoId, '==', dt.user, '===', dt.isLike)
             })
         })
-        console.log('selarr',selarr)
 
     setTimeout(() => {
         if(!userNm){
             document.querySelector('#is-user').style.display='none';
         }else
         if (selarr.length !== 0) {
-            console.log('selarr1',selarr.length)
             document.querySelector('.like-btn').style.display = 'none';
             document.querySelector('#already-liked').style.display = 'block';
         }else{
-            console.log('selarr2',selarr.length)
             document.querySelector('.like-btn').style.display = 'block';
             document.querySelector('#already-liked').style.display = 'none';
         }
@@ -48,13 +45,13 @@ const VideoDetail = ({ video }) => {
         const isLike = true;
         axios.post('/api/like', { user, data, isLike })
             .then(res => {
-                console.log(res.status)
+                
                 if (res.status === 200) {
                     document.querySelector('.like-btn').style.display = 'none';
                     document.querySelector('#already-liked').style.display = 'block';
                 }
             })
-            .catch(err => console.log(err))
+            .catch(err => alert ('Error: ',err))
     }
 
     const VidSrc = `https://www.youtube.com/embed/${video.id.videoId}`;

@@ -127,35 +127,31 @@ class SearchBar extends React.Component {
 
         // positive
 
-        'amused', 'blissful', 'calm', 'cheerful', 'content', 'dreamy', 'ecstatic', 'energetic', 'excited',
-
-        'flirty', 'giddy', 'good', 'happy', 'joyful', 'loving', 'mellow', 'optimistic', 'peaceful', 'silly', 'sympathetic',
+        'amused', 'blissful', 'calm', 'cheerful', 'content', 'dreamy', 'ecstatic', 'energetic', 'excited', 'flirty', 'giddy', 'good', 'happy', 'joyful', 'loving', 'mellow', 'optimistic', 'peaceful', 'silly', 'sympathetic',
 
         // negative
 
-        'angry', 'annoyed', 'apathetic', 'bad', 'cranky', 'depressed', 'envious', 'frustrated', 'gloomy', 'grumpy', 'guilty',
-
-        'indifferent', 'irritated', 'melancholy', 'pessimistic', 'rejected', 'restless', 'sad', 'stressed', 'weird'
+        'angry', 'annoyed', 'apathetic', 'bad', 'cranky', 'depressed', 'envious', 'frustrated', 'gloomy', 'grumpy', 'guilty', 'indifferent', 'irritated', 'melancholy', 'pessimistic', 'rejected', 'restless', 'sad', 'stressed', 'weird'
 
       ];
       //for any search on youtube---------------------------------------------
-      // this.setState({
-      //   term: finalTranscript,
-      // });
+      this.setState({
+        term: finalTranscript,
+      });
 
       //for only emotions search----------------------------------------------
-      for (let mod = 0; mod < moodArray.length; mod++) {
+      // for (let mod = 0; mod < moodArray.length; mod++) {
 
-        if ((interimTranscript === moodArray[mod]) || interimTranscript === `'feeling' ${moodArray[mod]}`) {
+      //   if ((interimTranscript === moodArray[mod]) || interimTranscript === `feeling ${moodArray[mod]}`) {
 
-          console.log(12345, interimTranscript, '---', moodArray[mod])
-          console.log('Final Text', finalTranscript, "-----", interimTranscript)
+      //     console.log(12345, interimTranscript, '---', moodArray[mod])
+      //     console.log('Final Text', finalTranscript, "-----", interimTranscript)
 
-          this.setState({
-            term: interimTranscript,
-          })
-        }
-      }
+      //     this.setState({
+      //       term: interimTranscript,
+      //     })
+      //   }
+      // }
 
       //-------------------------COMMANDS------------------------------------
 

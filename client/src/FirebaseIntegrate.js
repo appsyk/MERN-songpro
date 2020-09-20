@@ -58,7 +58,7 @@ class FirebaseIntegrate extends React.Component {
           likedList: res.data
         })
       })
-      .catch(err => console.log(err))
+      .catch(err => alert('Error: ', err))
   }
   render() {
     // let likedArray = [];
@@ -141,9 +141,9 @@ class FirebaseIntegrate extends React.Component {
                               axios.delete(`/api/like/${like._id}`)
                                 .then(res => {
                                   console.log(res.data)
-                                  // if(res.data.success === true){
-                                  //   alert('Removed Successfully..!')
-                                  // }else alert('This video is can not be removed..!')
+                                  if(res.data.success === true){
+                                    alert('Removed Successfully..!')
+                                  }else alert('This video is can not be removed..!')
                                 })
                                 .catch(err => {
                                   if(err){
