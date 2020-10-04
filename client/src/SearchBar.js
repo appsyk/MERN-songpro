@@ -345,7 +345,7 @@ class SearchBar extends React.Component {
         </nav><br /><br />
         <div className="mic-style">
           {/* {this.micLogo()} */}
-          <div onClick={this.toggleListen}>
+          <div id='mic-clicked' onClick={this.toggleListen}>
             {this.state.listening === false ? (<span className="intro-banner-vdo-play-btn blueBg" target="_blank">
               <i className="fa fa-microphone-slash" style={{ color: '#53251f' }} aria-hidden="true"></i>
               <span className="ripple blueBg"></span>
