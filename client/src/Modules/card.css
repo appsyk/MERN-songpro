@@ -1,9 +1,10 @@
+
 body{
   /* background: url(../images/bg-image.jpg); */
-  background: url(../images/music-bg-img.jpg);
-  background: url(../images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg);
+  /* background: url(../images/jonathan-velasquez-c1ZN57GfDB0-unsplash.jpg); */
+  background: url(https://source.unsplash.com/1600x900/?music);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     background-attachment: fixed;
     background-size: cover;
     /* background-size: 100vh 100vw; */

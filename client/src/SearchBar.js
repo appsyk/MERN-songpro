@@ -115,7 +115,7 @@ class SearchBar extends React.Component {
 
     let finalTranscript = ''
     recognition.onresult = event => {
-      let interimTranscript = ''
+      let interimTranscript = '';
 
       for (let i = event.resultIndex; i < event.results.length; i++) {
         const transcript = event.results[i][0].transcript;
@@ -123,17 +123,17 @@ class SearchBar extends React.Component {
         else interimTranscript += transcript;
       }
 
-      var moodArray = [
+      // var moodArray = [
 
-        // positive
+      //   // positive
 
-        'amused', 'blissful', 'calm', 'cheerful', 'content', 'dreamy', 'ecstatic', 'energetic', 'excited', 'flirty', 'giddy', 'good', 'happy', 'joyful', 'loving', 'mellow', 'optimistic', 'peaceful', 'silly', 'sympathetic',
+      //   'amused', 'blissful', 'calm', 'cheerful', 'content', 'dreamy', 'ecstatic', 'energetic', 'excited', 'flirty', 'giddy', 'good', 'happy', 'joyful', 'loving', 'mellow', 'optimistic', 'peaceful', 'silly', 'sympathetic',
 
-        // negative
+      //   // negative
 
-        'angry', 'annoyed', 'apathetic', 'bad', 'cranky', 'depressed', 'envious', 'frustrated', 'gloomy', 'grumpy', 'guilty', 'indifferent', 'irritated', 'melancholy', 'pessimistic', 'rejected', 'restless', 'sad', 'stressed', 'weird'
+      //   'angry', 'annoyed', 'apathetic', 'bad', 'cranky', 'depressed', 'envious', 'frustrated', 'gloomy', 'grumpy', 'guilty', 'indifferent', 'irritated', 'melancholy', 'pessimistic', 'rejected', 'restless', 'sad', 'stressed', 'weird'
 
-      ];
+      // ];
       //for any search on youtube---------------------------------------------
       this.setState({
         term: finalTranscript,

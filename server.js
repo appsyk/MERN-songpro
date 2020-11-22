@@ -20,7 +20,7 @@ app.use('/api/user', user)
 app.use('/api/like', like)
 
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5120;
 
 app.listen(port, () => console.log(`server is connected to port ${port}`));
 
